@@ -1,0 +1,129 @@
+.main-continer{
+   background-color: #EFEFEF;
+}
+
+.grid-container {
+    width: 80%;
+    float: left;
+}
+
+.actions{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    float: left;
+}
+
+.actions #sortButton,
+.actions #shuffleButton{
+   width: 155px;
+   padding: 15px;
+   margin: 20px 20px 0 20px;
+   color: #FFF;
+   background-color: #72C3DB;
+   border-radius: 8px;
+   border: none;
+   font-size: 16px;
+   text-transform: uppercase;
+   box-shadow: 0px 3px 0px #2b8ead;
+   cursor: pointer;
+}
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    width: 100%;
+    float: left;
+    
+}
+
+.grid-caption{
+    clear: both;
+}
+
+.cell-wrapper{
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    height: 250px;
+    margin-bottom: 5px;
+    background-color: #cccccc78;
+    position: relative;
+}
+
+.cell {
+    background-color: #999;
+    height: 100%;
+}
+
+.cell span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 40px;
+    color: #FFFFFF;
+    transform: translate(-50%, -50%);
+
+}
+
+.grid-title {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    order: 0;
+}
+
+.grid-caption{
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+    order: 3;
+}
+
+@media only screen and (max-width: 376px) {
+
+
+    .main-continer{
+        display: flex;
+        flex-direction: column;
+     }
+
+     .grid-container {
+        width: 100%;
+        float: left;
+        order: 2;
+    }
+
+    .grid {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cell {
+        height: 40px;
+        margin-bottom: 5px;
+        background-color: #999;
+        padding: 10px;
+        width: 10px;
+    }
+
+    .actions {
+        width: auto;
+        height: 100px;
+        margin: 0 auto;
+        float: left;
+        order: 1;
+    }
+
+    .actions #sortButton, .actions #shuffleButton {
+        width: 100px;
+        padding: 10px;
+        margin: 20px 0px 0 0px;
+        border: none;
+        font-size: 14px;
+    }
+  }
